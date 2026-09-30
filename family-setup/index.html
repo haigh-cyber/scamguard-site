@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Family mode setup guide — ScamGuard</title>
+  <meta name="description" content="A one-page, printable guide to setting up ScamGuard's Family mode on a relative's iPhone.">
+  <link rel="icon" href="../favicon.png">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .steps { counter-reset: step; list-style: none; padding: 0; margin: 0; }
+    .steps li { counter-increment: step; position: relative; padding-left: 44px; margin-bottom: 14px; }
+    .steps li::before {
+      content: counter(step);
+      position: absolute; left: 0; top: 0;
+      width: 30px; height: 30px; border-radius: 50%;
+      background: var(--fill); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 16px;
+    }
+    .fill-in { display: inline-block; min-width: 180px; border-bottom: 2px solid var(--secondary); }
+    .keep { border: 3px solid var(--fill); }
+    .keep h2 { font-size: 24px; }
+    .big { font-size: 20px; }
+    .print-hint { margin-bottom: 20px; }
+
+    /* One A4/Letter page: no chrome, black on white, no shadows, tighter spacing. */
+    @media print {
+      @page { margin: 14mm; }
+      :root { --bg: #fff; --surface: #fff; --text: #000; --secondary: #333; --inset: #ddd; }
+      body { font-size: 12pt; line-height: 1.4; }
+      header.site nav, footer, .print-hint { display: none; }
+      main { padding: 0; max-width: none; }
+      header.site { margin-bottom: 10px; }
+      header.site img { width: 36px; height: 36px; }
+      h1 { font-size: 22pt; }
+      .card { box-shadow: none; border: 1px solid #999; padding: 12px 16px; margin-bottom: 10px; break-inside: avoid; }
+      .keep { border: 3px solid #000; }
+      .steps li { margin-bottom: 8px; }
+      .steps li::before { background: #000; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: #000; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header class="site">
+    <img src="../icon.png" alt="">
+    <a href="../">ScamGuard</a>
+    <nav aria-label="Site">
+      <a href="../privacy/">Privacy</a>
+      <a href="../support/">Support</a>
+    </nav>
+  </header>
+
+  <h1>Family mode setup</h1>
+  <p class="lede">For setting up ScamGuard on a parent's or relative's iPhone. Takes about 5 minutes.</p>
+  <p class="print-hint"><a class="button" href="javascript:window.print()">Print this page</a></p>
+
+  <div class="card">
+    <h2>Part 1 — you set it up (on their iPhone)</h2>
+    <ol class="steps">
+      <li>Install <strong>ScamGuard</strong> and open it. In step 1, tap <strong>Add Screen Scan shortcut</strong>, then <strong>Add Shortcut</strong>.</li>
+      <li>Go to <strong>Settings › Accessibility › Touch › Back Tap › Double Tap</strong> and choose <strong>Screen Scan</strong>.</li>
+      <li>Back in ScamGuard, finish setup. On "Try it now", double-tap the back of the phone and tap <strong>Always Allow</strong>.</li>
+      <li>Open <strong>Settings › Family mode</strong>. Tap <strong>Choose from Contacts</strong> and pick yourself, then turn on <strong>Family mode</strong>.</li>
+      <li>ScamGuard now shows one simple screen. Its settings are behind a "Hold to open" button, so they can't be switched off by accident.</li>
+    </ol>
+  </div>
+
+  <div class="card keep">
+    <h2>Part 2 — keep this by the phone</h2>
+    <p class="big">Got a message you're not sure about? <strong>Don't reply, tap links or pay</strong> — check it first:</p>
+    <ol class="steps big">
+      <li>With the message on screen, <strong>tap the back of the phone twice</strong>.</li>
+      <li>Or open <strong>ScamGuard</strong>, copy the message, and tap <strong>Paste</strong>.</li>
+      <li>If it says <strong>Likely scam</strong> or <strong>Be careful</strong>, tap <strong>Ask</strong> to send it to me before doing anything.</li>
+    </ol>
+    <p class="big">Your helper: <span class="fill-in">&nbsp;</span> &nbsp; Phone: <span class="fill-in">&nbsp;</span></p>
+    <p>Banks, myGov, the ATO and Australia Post will <strong>never</strong> ask you to pay a fee, give a code or log in through a text message link.</p>
+  </div>
+
+  <footer><p><a href="../">ScamGuard</a> · <a href="../support/">Support</a> · <a href="../privacy/">Privacy policy</a></p></footer>
+</main>
+</body>
+</html>
