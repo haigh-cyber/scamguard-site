@@ -1,6 +1,6 @@
-# ScamGuard website
+# ScamTap website
 
-Public privacy policy and support pages for the ScamGuard iPhone app, served by GitHub Pages:
+Public privacy policy and support pages for the ScamTap iPhone app, served by GitHub Pages:
 
 - https://haigh-cyber.github.io/scamguard-site/
 - Privacy policy: https://haigh-cyber.github.io/scamguard-site/privacy/
